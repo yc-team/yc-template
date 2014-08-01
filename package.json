@@ -1,9 +1,10 @@
 {
   "name": "yc-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "just for yc module template auto helper tools",
   "bin": {
-    "yc-template": "./bin/yc-template"
+    "yc-tpl": "./bin/yc-template",
+    "ytpl": "./bin/yc-template"
   },
   "repository": {
     "type": "git",
