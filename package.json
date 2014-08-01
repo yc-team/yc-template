@@ -1,0 +1,23 @@
+{
+  "name": "yc-template",
+  "version": "0.0.3",
+  "description": "just for yc module template auto helper tools",
+  "bin": {
+    "yc-template": "./bin/yc-template"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yc-team/yc-template.git"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "yc",
+    "template"
+  ],
+  "author": "zhangyaochun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yc-team/yc-google/issues"
+  }
+}

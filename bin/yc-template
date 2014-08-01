@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+
+"use strict";
+
+var path = require('path');
+var exec = require('child_process').exec;
+
+
+var args = process.argv.slice(2);
+
+if (!args.length) {
+    console.log('Usage:' yc-template [name]);
+    process.exit(1);
+}
+
+var name = args[0]
+
+var newModulePath = path.join(process.cwd(), name);
+
+var template = path.join(path.dirname(__dirname), 'template'); 
+
+
+
+var cpCmd = 'cp -rf ' + template + ' ' + newModulePath;
+
+exec(cpCmd, function(err, stdout, stderr){
+    if (err) {
+        throw err;
+    }
+
+    if (stdout) {
+        console.log(stdout);
+    }
+
+    if (stderr) {
+        console.log(stderr);
+    }
+
+    fs.readdirSync(template).forEach(function(filename){
+        var filepath = path.join(template, filename);
+
+        if (fs.statSync(filepath).isDirectory()) {
+            //is dir
+            fs.readdirSync(filepath).forEach(function(f){
+                var subFilePath = path.join(filepath, f);
+
+                if (fs.statSync(subFilePath).isFile()) {
+                    if (subFilePath.indexOf('__name__') > -1) {
+                        var renamed = subFilePath.replace('__name', name);
+                        fs.renameSync(subFilePath, renamed);
+                    }
+                }
+            });
+
+        } else {
+            //just file
+            var content = fs.readFileSync(filepath, 'utf-8');
+            content = content.replace(/\{\{name\}\}/g, name);
+
+            fs.writeFilesSync(filepath, content);
+
+        }
+    });
+});

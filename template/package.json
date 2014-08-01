@@ -1,0 +1,29 @@
+{
+  "name": "yc-{{name}}",
+  "version": "0.0.1",
+  "description": "{{name}} for yc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yc-team/yc-{{name}}.git"
+  },
+  "keywords": [
+    "yc",
+    "{{name}}"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "author": "zhangyaochun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yc-team/yc-google/issues"
+  }
+}
