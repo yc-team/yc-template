@@ -1,6 +1,6 @@
 {
   "name": "yc-template",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "just for yc module template auto helper tools",
   "bin": {
     "yc-tpl": "./bin/yc-template",
@@ -19,6 +19,6 @@
   "author": "zhangyaochun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yc-team/yc-google/issues"
+    "url": "https://github.com/yc-team/yc-template/issues"
   }
 }

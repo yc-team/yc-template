@@ -47,7 +47,7 @@ exec(cpCmd, function(err, stdout, stderr){
 
                 if (fs.statSync(subFilePath).isFile()) {
                     if (subFilePath.indexOf('__name__') > -1) {
-                        var renamed = subFilePath.replace('__name', name);
+                        var renamed = subFilePath.replace('__name__', name);
                         fs.renameSync(subFilePath, renamed);
                     }
                 }

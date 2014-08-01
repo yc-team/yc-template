@@ -24,6 +24,6 @@
   "author": "zhangyaochun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yc-team/yc-google/issues"
+    "url": "https://github.com/yc-team/yc-{{name}}/issues"
   }
 }
