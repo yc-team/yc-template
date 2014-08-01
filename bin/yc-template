@@ -37,8 +37,8 @@ exec(cpCmd, function(err, stdout, stderr){
         console.log(stderr);
     }
 
-    fs.readdirSync(template).forEach(function(filename){
-        var filepath = path.join(template, filename);
+    fs.readdirSync(newModulePath).forEach(function(filename){
+        var filepath = path.join(newModulePath, filename);
 
         if (fs.statSync(filepath).isDirectory()) {
             //is dir

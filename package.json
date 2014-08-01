@@ -1,6 +1,6 @@
 {
   "name": "yc-template",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "just for yc module template auto helper tools",
   "bin": {
     "yc-tpl": "./bin/yc-template",
